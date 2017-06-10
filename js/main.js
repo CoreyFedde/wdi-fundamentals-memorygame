@@ -17,19 +17,17 @@ var cards = [
 {
 	rank: "king",
 	suit: "diamonds",
-	cardImage: "images/queen-of-diamonds.png",
+	cardImage: "images/king-of-diamonds.png",
 },
 
 ];
 var cardsInPlay = [];
 
 var checkForMatch = function() {
-	if (cardsInPlay.length === 2) {
-		if (cardsInPlay[0] === cardsInPlay[1]) {
-			alert("You found a match!")} 
-		else {
-			alert("Sorry, try again.")};
-		};
+	if (cardsInPlay[0] === cardsInPlay[1]) {
+		alert("You found a match!")} 
+	else {
+		alert("Sorry, try again.")};
 };
 
 var flipCard = function() {
@@ -42,7 +40,10 @@ var flipCard = function() {
 
 	this.setAttribute('src',cards[cardId].cardImage);
 
+	if (cardsInPlay.length === 2) {
 	checkForMatch();
+	cardsInPlay = [];
+	};
 };
 
 var createBoard = function() {
