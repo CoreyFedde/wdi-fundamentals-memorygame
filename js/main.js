@@ -1,3 +1,5 @@
+var testingbranches
+
 var cards = [
 {
 	rank: "queen",
